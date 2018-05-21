@@ -8,8 +8,7 @@ Tank Deathmatch is my attempt at an open-arena tank battle sim, made with Unreal
 This serves only as the basic concept for the map, having only done landscaping and basic texturing.
 
 
-# Tank Pawns/Meshes
-![alt text](https://github.com/bsteel364/Tank-Deathmatch/blob/master/Tanks%201.1.PNG)
+# The Tank
 ![alt text](https://github.com/bsteel364/Tank-Deathmatch/blob/master/tank_BP.PNG)
 ![alt text](https://github.com/bsteel364/Tank-Deathmatch/blob/master/tank%201.0.PNG)
-Here are some unfinished sample meshes of the TANK.
+This is what the tank pawn mesh looks like so far.  parts move as they would on a real tank, (if the turret moves, the barrel moves with it) however the wheels and tracks do not move yet
