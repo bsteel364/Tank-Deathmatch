@@ -24,4 +24,6 @@ public:
 	void Tick(float DeltaTime) override;
 
 	void AimTowardsCrosshair();
+
+	bool GetSightRayHitLocation(FVector& HitLocation);
 };

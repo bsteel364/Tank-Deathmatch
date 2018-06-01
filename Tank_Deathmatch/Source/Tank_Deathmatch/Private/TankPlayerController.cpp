@@ -7,8 +7,8 @@
 void ATankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick( DeltaTime );
-	//AimCrosshair()
-	UE_LOG(LogTemp, Warning, TEXT("TIC"));
+	AimTowardsCrosshair();
+	//UE_LOG(LogTemp, Warning, TEXT("TICKING TEST"));
 }
 void ATankPlayerController::BeginPlay()
 {
@@ -23,10 +23,25 @@ ATank* ATankPlayerController::GetControlledTank()
 
 void ATankPlayerController::AimTowardsCrosshair()
 {
-	if (!GetControlledTank)
+	if (!GetControlledTank())
 	{
 		return;
 	}
 
+	FVector HitLocation; //out param
+	if (GetSightRayHitLocation(HitLocation))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Hit Location %s"), *HitLocation.ToString());
+	}
+	
+
 	//Get world location if linetrace through crosshair
 }
+
+bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation)
+{
+	HitLocation = FVector(1.0);
+	return true;
+}
+
+
